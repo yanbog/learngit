@@ -60,13 +60,28 @@
 
 - 添加`SSH KEY`保证安全的授权访问：
  1. 配置Git Bash全局配置：
+
+```
+
+	git config --global user.name "You GitGub User Name"
+	git config --global user.email "example@example.com"
+```
+
  2. 生成`SSH KEY`安全密钥：
+
+```
+
+	ssh-keygen -t rsa -C "YouEmail@email.com"
+
+```
+
  3. 拷贝公有`SSH KEY`密钥，并添加到`GitHub`账户的`SSH KEY`中：
+ > 浏览器打开GitHub官网，登录GitHub账户。点击【用户头像】->【Settings】->【SSH and GPG keys】->【SSH keys】->【New SSH Key】;填写`SSH KEY Title`,在`Key`中粘贴已复制好的密钥内容，点击`Add SSH Key`保存内容。
  4. 测试SSH密钥是否验证通过：
 
  ```
 
  	ssh -T git@github.com
- 	//返回成功提示代表密钥配置成功
+ 	//Hi {You User Name}! You've successfully authenticated, but GitHub does not provide shell access
 
  ```
