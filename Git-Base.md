@@ -37,6 +37,15 @@
 	//Git init
 	git init
 
+	//Add
+	git add {File Name}
+
+	//Commit
+	git commit -m "Effective Description"
+
+	//Push
+	git push origin master
+
 ```
 
 - 本地创建项目到GitHub远程仓库：
