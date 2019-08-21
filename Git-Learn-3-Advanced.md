@@ -1,2 +1,5 @@
 ![Git Learn Logo](https://images.cnblogs.com/cnblogs_com/hollow/1530701/o_Git-Logo.png)
-# Windows下安装Git（图文详细教程+选项翻译）
+
+# Git Learn 2 Advanced - Advanced usage of Git【Git进阶】
+
+> Git使用高级篇

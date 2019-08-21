@@ -1,6 +1,8 @@
 ![Git Learn Logo](https://images.cnblogs.com/cnblogs_com/hollow/1530701/o_Git-Logo.png)
 
-# Git Basc
+# Git Learn 2 Basic - Basic usage of Git【Git 基础使用方法】
+
+> 一篇文章快速掌握Git的使用
 
 ## 概述Git：
 - Git简述：
