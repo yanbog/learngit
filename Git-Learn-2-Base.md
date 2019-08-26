@@ -124,9 +124,9 @@ git status|跟踪文件状态|-s|git status -s
 ```
 ## 使用Git
 
-### 本地创建Git存储仓库：
+### 在现有目录中初始化仓库：
 
-> 切换到本地磁盘下的纯英文【强烈建议】文件夹，新建一个文件夹，并执行`git init`命令，将新建的目录变成可管理的仓库：
+> 切换到本地磁盘下的工作目录文件夹，并执行`git init`命令，将新建的目录变成可管理的仓库：
 
 ```
 
@@ -139,6 +139,7 @@ git status|跟踪文件状态|-s|git status -s
 
 	//Create Ignore File
 	echo "*.log" > .gitignore
+	echo "*.tmp" >> .gitignore
 
 	//Create README.md File 
 	echo "Git Learning Project learngit" > README.md
@@ -177,32 +178,32 @@ git status|跟踪文件状态|-s|git status -s
 
 ### 添加`SSH KEY`保证安全的授权访问：
 
- 1. 配置Git Bash全局配置：
+1. 配置Git Bash全局配置：
 
-```
+	```
+	
+		git config --global user.name "You GitGub User Name"
+		git config --global user.email "example@example.com"
+	
+	```
 
-	git config --global user.name "You GitGub User Name"
-	git config --global user.email "example@example.com"
+2. 生成`SSH KEY`安全密钥：
 
-```
+	```
+	
+		ssh-keygen -t rsa -C "YouEmail@email.com"
+	
+	```
 
- 2. 生成`SSH KEY`安全密钥：
-
-```
-
-	ssh-keygen -t rsa -C "YouEmail@email.com"
-
-```
-
- 3. 拷贝公有`SSH KEY`密钥，并添加到`GitHub`账户的`SSH KEY`中：
+3. 拷贝公有`SSH KEY`密钥，并添加到`GitHub`账户的`SSH KEY`中：
  
- > 浏览器打开GitHub官网，登录GitHub账户。点击【用户头像】->【Settings】->【SSH and GPG keys】->【SSH keys】->【New SSH Key】;填写`SSH KEY Title`,在`Key`中粘贴已复制好的密钥内容，点击`Add SSH Key`保存内容。
+	> 浏览器打开GitHub官网，登录GitHub账户。点击【用户头像】->【Settings】->【SSH and GPG keys】->【SSH keys】->【New SSH Key】;填写`SSH KEY Title`,在`Key`中粘贴已复制好的密钥内容，点击`Add SSH Key`保存内容。
  
- 4. 测试SSH密钥是否验证通过：
+4. 测试SSH密钥是否验证通过：
 
-```
-
- 	ssh -T git@github.com
- 	//Hi {You User Name}! You've successfully authenticated, but GitHub does not provide shell access
-
-```
+	```
+	
+	 	ssh -T git@github.com
+	 	//Hi {You User Name}! You've successfully authenticated, but GitHub does not provide shell access
+	
+	```
